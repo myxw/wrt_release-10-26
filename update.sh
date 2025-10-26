@@ -38,7 +38,7 @@ FEEDS_CONF="feeds.conf.default"
 GOLANG_REPO="https://github.com/sbwml/packages_lang_golang"
 GOLANG_BRANCH="25.x"
 THEME_SET="argon"
-LAN_ADDR="192.168.1.1"
+LAN_ADDR="192.168.10.1"
 
 clone_repo() {
     if [[ ! -d $BUILD_DIR ]]; then
@@ -1067,7 +1067,7 @@ main() {
     update_diskman
     set_nginx_default_config
     update_uwsgi_limit_as
-    update_argon
+    #update_argon
     update_nginx_ubus_module # 更新 nginx-mod-ubus 模块
     install_feeds
     fix_easytier_lua
